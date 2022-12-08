@@ -1,8 +1,10 @@
+const { pause } = require("codeceptjs");
+
 Feature('first');
 
 Scenario('Check Github main page', ({ I }) => {
   I.amOnPage('https://github.com/');
-  I.see('Sign in'); 
+  I.see('Sign in');
 });
 
 

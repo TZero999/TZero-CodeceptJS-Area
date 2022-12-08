@@ -7,5 +7,5 @@ Scenario('Registration / Login on mvideo.ru', ({ I }) => {
     I.see("Вход или регистрация",'h2');
     I.fillField({ css: 'input[type=tel]' }, secret('9313543081'));
     I.click('Продолжить');
-    pause();
+    I.see("Мы отправили код");
 });

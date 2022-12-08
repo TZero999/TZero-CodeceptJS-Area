@@ -1,0 +1,7 @@
+1) Сохранение скриншотов проваленного теста
+npx codeceptjs run -p screenshotOnFail
+
+2) Сохранение скриншотов каждого шага теста
+npx codeceptjs run -p stepByStepReport
+
+
