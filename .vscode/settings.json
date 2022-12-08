@@ -1,0 +1,8 @@
+{
+    "files.exclude": {
+        "**/*.json": true,
+        "**/*.ts": true,
+        "**/node_modules": true,
+        "**/output": true
+    }
+}
