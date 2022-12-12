@@ -24,6 +24,17 @@ exports.config = {
       }
     }
   },
+
+  plugins: {
+    autoDelay: {
+      enabled: true
+    },
+    pauseOnFail: {
+    //  enabled: true
+    },
+    
+  },
+
   include: {
     I: './steps_file.js'
   },
