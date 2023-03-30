@@ -53,9 +53,8 @@ exports.config = {
     
    CommentExtractor: {
       require: './CustomHelpers/commentextractor_helper.js',
-   }
-
- },
+   },
+  },
 
   plugins: {
 
