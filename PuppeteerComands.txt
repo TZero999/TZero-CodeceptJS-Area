@@ -1,0 +1,134 @@
+📝 https://github.com/codeceptjs/CodeceptJS/blob/d60dde173b5aecc06e45de0a6b86a43dec69f8ef/test/helper/Puppeteer_test.js (opens new window)
+
+📎 Puppeteer - BasicAuth
+📎 open page with provided basic auth
+✔️ should be authenticated
+✔️ should be authenticated on second run
+📎 Puppeteer
+📎 Session
+✔️ should not fail for localStorage.clear() on about:blank
+📎 open page : #amOnPage
+✔️ should open main page of configured site
+✔️ should open any page of configured site
+✔️ should open absolute url
+✔️ should be unauthenticated
+📎 grabDataFromPerformanceTiming
+✔️ should return data from performance timing
+📎 #waitForFunction
+✔️ should wait for function returns true
+✔️ should pass arguments and wait for function returns true
+📎 #waitToHide
+✔️ should wait for hidden element
+✔️ should wait for hidden element by XPath
+📎 #waitNumberOfVisibleElements
+✔️ should wait for a specified number of elements on the page
+✔️ should wait for a specified number of elements on the page using a css selector
+✔️ should wait for a specified number of elements which are not yet attached to the DOM
+📎 #moveCursorTo
+✔️ should trigger hover event
+✔️ should not trigger hover event because of the offset is beyond the element
+📎 #switchToNextTab, #switchToPreviousTab, #openNewTab, #closeCurrentTab, #closeOtherTabs, #grabNumberOfOpenTabs
+✔️ should only have 1 tab open when the browser starts and navigates to the first page
+✔️ should switch to next tab
+✔️ should assert when there is no ability to switch to next tab
+✔️ should close current tab
+✔️ should close other tabs
+✔️ should open new tab
+✔️ should switch to previous tab
+✔️ should assert when there is no ability to switch to previous tab
+📎 popup : #acceptPopup, #seeInPopup, #cancelPopup, #grabPopupText
+✔️ should accept popup window
+✔️ should accept popup window (using default popup action type)
+✔️ should cancel popup
+✔️ should check text in popup
+✔️ should grab text from popup
+✔️ should return null if no popup is visible (do not throw an error)
+📎 #seeNumberOfElements
+✔️ should return 1 as count
+📎 #switchTo
+✔️ should switch reference to iframe content
+✔️ should return error if iframe selector is invalid
+✔️ should return error if iframe selector is not iframe
+✔️ should return to parent frame given a null locator
+📎 #seeInSource, #grabSource
+✔️ should check for text to be in HTML source
+✔️ should grab the source
+📎 #seeTitleEquals
+✔️ should check that title is equal to provided one
+📎 #seeTextEquals
+✔️ should check text is equal to provided one
+📎 #_locateClickable
+✔️ should locate a button to click
+✔️ should not locate a non-existing checkbox using _locateClickable
+📎 #_locateCheckable
+✔️ should locate a checkbox
+📎 #_locateFields
+✔️ should locate a field
+✔️ should not locate a non-existing field
+📎 check fields: #seeInField, #seeCheckboxIsChecked, ...
+✔️ should throw error if field is not empty
+✔️ should check values in checkboxes
+✔️ should check values with boolean
+✔️ should check values in radio
+✔️ should check values in select
+✔️ should check for empty select field
+✔️ should check for select multiple field
+📎 #pressKey, #pressKeyDown, #pressKeyUp
+✔️ should be able to send special keys to element
+✔️ should use modifier key based on operating system
+✔️ should show correct numpad or punctuation key when Shift modifier is active
+✔️ should show correct number key when Shift modifier is active
+📎 #waitForEnabled
+✔️ should wait for input text field to be enabled
+✔️ should wait for input text field to be enabled by xpath
+✔️ should wait for a button to be enabled
+📎 #waitForText
+✔️ should wait for text after load body
+📎 #waitForValue
+✔️ should wait for expected value for given locator
+✔️ should wait for expected value for given css locator
+✔️ should wait for expected value for given xpath locator
+✔️ should only wait for one of the matching elements to contain the value given xpath locator
+✔️ should only wait for one of the matching elements to contain the value given css locator
+📎 #grabHTMLFrom
+✔️ should grab inner html from an element using xpath query
+✔️ should grab inner html from an element using id query
+✔️ should grab inner html from multiple elements
+✔️ should grab inner html from within an iframe
+📎 #grabBrowserLogs
+✔️ should grab browser logs
+✔️ should grab browser logs across pages
+📎 #dragAndDrop
+✔️ Drag item from source to target (no iframe) @dragNdrop
+✔️ Drag and drop from within an iframe
+📎 #switchTo frame
+✔️ should switch to frame using name
+✔️ should switch to root frame
+✔️ should switch to frame using frame number
+📎 #dragSlider
+✔️ should drag scrubber to given position
+📎 #uncheckOption
+✔️ should uncheck option that is currently checked
+✔️ should NOT uncheck option that is NOT currently checked
+📎 #grabElementBoundingRect
+✔️ should get the element bounding rectangle
+✔️ should get the element width
+✔️ should get the element height
+📎 #handleDownloads
+✔️ should dowload file
+📎 #waitForClickable
+✔️ should wait for clickable
+✔️ should wait for clickable by XPath
+✔️ should fail for disabled element
+✔️ should fail for disabled element by XPath
+✔️ should fail for element not in viewport by top
+✔️ should fail for element not in viewport by bottom
+✔️ should fail for element not in viewport by left
+✔️ should fail for element not in viewport by right
+✔️ should fail for overlapping element
+✔️ should pass if element change class
+✔️ should fail if element change class and not clickable
+📎 Puppeteer (remote browser)
+📎 #_startBrowser
+✔️ should throw an exception when endpoint is unreachable
+✔️ should clear any prior existing pages on remote browser

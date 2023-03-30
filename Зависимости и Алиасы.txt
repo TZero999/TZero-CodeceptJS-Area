@@ -1,0 +1,79 @@
+
+# Зависимости
+  {
+  Засисимости можно внедрять через конфигурационный файл.
+  Это позволит внедрять объекты в сценарии по их имени:
+
+  include: {
+    I: "./custom_steps.js",
+    Smth: "./pages/Smth.js",
+    loginPage: "./pages/Login.js",
+    signinFragment: "./fragments/Signin.js"
+  }
+  }
+
+# Актёры
+  { 
+  CodeceptJS позволяет создать файл пользовательских шагов.
+  Для этого можно использовать файл custom_steps.js для расширения функционала I.
+  Вот как можно добавить метод login для объекта I:
+
+  module.exports = function() {
+      return actor({
+    
+        login: function(email, password) {
+          this.fillField('Email', email);
+          this.fillField('Password', password);
+          this.click('Submit');
+        }
+      });
+    }
+
+  ВАЖНО: В текущей ситуации вместо "I" надо использовать "this".
+  }
+
+# Объекты страницы 
+  {
+    В случае, когда приложение имеет разные страницы (логин, кабинет пользователя и т.д.) можно
+    использовать разные внедряемые объекты для разных страниц.
+    
+    CodeceptJS может сгенерировать шаблон для объекта страницы с помощью следующей команды:
+    "npx codeceptjs gpo"
+
+    Это создаст шаблон следующего вида для объекта страницы и включит его в файл codecept.json:
+    
+    const { I, otherPage } = inject();
+    module.exports = {
+      # insert your locators and methods here
+    }
+
+      Пример того, как всё это работает в итоге:
+      # enable I and another page object
+      const { I, registerPage } = inject();
+
+      module.exports = {
+
+        # setting locators
+        fields: {
+          email: '#user_basic_email',
+          password: '#user_basic_password'
+        },
+        submitButton: {css: '#new_user_basic input[type=submit]'},
+
+        # introducing methods
+        sendForm(email, password) {
+          I.fillField(this.fields.email, email);
+          I.fillField(this.fields.password, password);
+          I.click(this.submitButton);
+        },
+
+        register(email, password) {
+          # use another page object inside current one
+          registerPage.registerUser({ email, password });
+        }
+      }
+
+    Внутри объекта страницы можно использовать async и await.
+    
+    
+  }

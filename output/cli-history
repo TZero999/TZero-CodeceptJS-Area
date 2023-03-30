@@ -1,0 +1,9 @@
+
+
+<<< Recorded commands on Sun Mar 05 2023 15:47:19 GMT+0300 (Москва, стандартное время)
+I.continue
+
+<<< Recorded commands on Tue Mar 07 2023 19:35:56 GMT+0300 (Москва, стандартное время)
+I.click('label[class="drop-select"]')
+I.click('label[class="drop-select"], input[value="ru"]')
+I.click('label[class="drop-select"], input[value="by"]')
