@@ -1,0 +1,55 @@
+Testing Challenges.org Testing automatization --
+  Complition 18 test cases: 
+    Я на странице "http://testingchallenges.thetestingmap.org/i…
+    Я see title equals "Testing Challenges"
+    Я grab source 
+    Я беру куки "TestingChallenge"
+Код из Cookie:  oi32jnxd42390slk345
+    Я grab browser logs 
+    Я выполняю скрипт async function userAsAdmin(){
+        let hint = document.getElementsByName('user_right_as_admin')[0];
+        hint.setAttribute('value','1');
+        console.log('Done! You have received administrator rights!');
+    }
+    Я see text equals "0", "span[class="values-tested"]"
+    Я заполняю поле "input[id="firstname"]", "Smith"
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", " Smith"
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "Smith "
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "Smith Wesson"
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "S"
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", " "
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", 
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "<img src="logo.pn…
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "👍"
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "Кирилл"
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "@!_"
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "SmithAndWessonCor…
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "SmithAndWessonCor…
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "'SQL-injection'"
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "<script>alert("Aa…
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "dfjwGGe82H43g3uRi…
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "oi32jnxd42390slk3…
+    Я кликаю "input[type="submit"]"
+    Я заполняю поле "input[id="firstname"]", "detailsoverviewno…
+    Я кликаю "input[type="submit"]"
+    Я see text equals "18", "span[class="values-tested"]"
+  ✔ OK in 40218ms
+
+
+  OK  | 1 passed   // 42s
