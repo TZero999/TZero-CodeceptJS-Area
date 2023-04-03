@@ -51,9 +51,15 @@ exports.config = {
       apiKey: '<cbf10b0e3500f1eaada464992bad7d75202768bdb41ad57bcfb2c48555da2269>'
     },
     
-   CommentExtractor: {
-      require: './CustomHelpers/commentextractor_helper.js',
-   },
+    SetAttribute: {
+      require: './CustomHelpers/SetAttribute_helper.js',
+    },
+
+    REST: {
+      endpoint: 'http://localhost:5500/',
+      prettyPrintJson: true, 
+    },
+   
   },
 
   plugins: {

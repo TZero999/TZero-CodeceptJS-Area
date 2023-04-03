@@ -1,0 +1,138 @@
+
+/*
+    Можно проверять успешность прохождения тестов:
+I.seeTextEquals(String(i+1), 'span[class="values-tested"]');
+    Но тогда придётся использовать for:
+for ( let i; i <= testsDataArray.length; i++)
+    + порой несколько тестов засчитываются за 1 input.
+    Следует отказаться от этой идеи.
+*/
+
+/*
+Способ извлечения комментария, недоступный для Puppeteer:
+    temp1 = document.documentElement.innerHTML;
+    temp1 = temp1.split('<!--');
+    temp2 = temp1[temp1.length-1]; - получаем строку с нужным комментарием.
+    temp3 = temp2.split(' ');
+    temp3 = temp3[temp3.length-1].slice(SOMETHING); 
+*/
+
+/*
+    Перехват трафика через fetch - работает, но не так, как хочется.
+Метод POST на адрес http://testingchallenges.thetestingmap.org/index.php
+"user_right_as_admin": "1";
+
+    Какова логика запроса???
+С каждым submit-ом делаем POST, а сервер снова и снова возвращает нам документ GET-ом?
+Надо разобраться. 
+*/
+
+//await fetch("http://testingchallenges.thetestingmap.org/index.php", {
+//    "credentials": "include",
+//    "headers": {
+//        "User-Agent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0",
+//       "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+//        "Accept-Language": "ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3",
+//       "Content-Type": "application/x-www-form-urlencoded",
+//        "Upgrade-Insecure-Requests": "1"
+//    },
+//    "referrer": "http://testingchallenges.thetestingmap.org/index.php",
+//    "body": "firstname= Smith&firstexecution=1&found=2&golhart=1&sartepace=&tgrgr=&GGTTre=&preaprea=&listsoftests=%3Cli%3EAverage+value%3C%2Fli%3E%3Cli%3EEmpty+value%3C%2Fli%3E&mmmmret=1&mfmmfdmret=&hrgefed=&apo=&scrt=&httersv=&httdsfrgersv=&user_right_as_admin=1&sopedace=&hds3ref=&sctte75rt=&xcfetrwdst=&xfhqmsntowt=&httr3gfdersv=&formSubmit=Submit",
+//    "method": "POST",
+//    "mode": "cors"
+// });
+
+/*
+let admin = {
+	"firstname": "Smith",
+	"firstexecution": "1",
+	"found": "0",
+	"golhart": "",
+	"sartepace": "",
+	"tgrgr": "",
+	"GGTTre": "",
+	"preaprea": "",
+	"listsoftests": "",
+	"mmmmret": "",
+	"mfmmfdmret": "",
+	"hrgefed": "",
+	"apo": "",
+	"scrt": "",
+	"httersv": "",
+	"httdsfrgersv": "",
+	"user_right_as_admin": "1",
+	"sopedace": "",
+	"hds3ref": "",
+	"sctte75rt": "",
+	"xcfetrwdst": "",
+	"xfhqmsntowt": "",
+	"httr3gfdersv": "",
+	"formSubmit": "Submit"
+};
+
+let response = await fetch('http://testingchallenges.thetestingmap.org', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8'
+  },
+  body: JSON.stringify(admin)
+});
+
+let result = await response.json();
+alert(result.message);
+
+*/
+//await fetch("http://testingchallenges.thetestingmap.org/index.php", {
+//  "headers": {
+//      "location": "http://testingchallenges.thetestingmap.org/index.php",
+//    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+//    "accept-language": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7",
+//    "cache-control": "max-age=0",
+//    "content-type": "application/x-www-form-urlencoded",
+//   "upgrade-insecure-requests": "1",
+//    "cookie": "TestingChallenge=You_have_checked_the_cookie_content._Add_oi32jnxd42390slk345_in_the_First_Name_field_to_mark_this_case.; PHPSESSID=8362fb42ec81185cffbf086bdec63307"
+//  },
+//  "referrer": "http://testingchallenges.thetestingmap.org/index.php",
+//  "referrerPolicy": "origin-when-cross-origin",
+//  "body": 'firstname=M&firstexecution=1&found=0&golhart=&sartepace=&tgrgr=&GGTTre=&preaprea=&listsoftests=&mmmmret=&mfmmfdmret=&hrgefed=&apo=&scrt=&httersv=&httdsfrgersv=&user_right_as_admin=1&sopedace=&hds3ref=&sctte75rt=&xcfetrwdst=&xfhqmsntowt=&httr3gfdersv=&formSubmit=Submit',
+//  "method": "POST",
+//  "mode": "cors",
+//  "credentials": "include",
+//   "redirect": "manual"
+//});
+
+
+// then(response => response.json())
+
+
+
+/*
+
+Это вызвано двухступенчатой ​​загрузкой отклика. Если вы используете какой-либо низкоуровневый API, убедитесь, что вы извлекаете не только заголовки, которые приходят первыми, но и основной контент, который приходит позже в виде потока.
+
+У меня была такая же проблема при использовании fetchфункции в JavaScript. Чтобы решить эту проблему, убедитесь, что вы вызываете метод, который читает тело ответа, например json()или text():
+
+// Sends request and loads only headers
+fetch('/foo');
+
+// Sends request, loads headers and then fetches the body as JSON
+fetch('/foo').then(response => response.json());
+
+В моем случае заголовки ответа также были загружены правильно, и у меня был успешный HTTPкод состояния, но мне не хватало содержимого тела, и у меня был Caution: request is not finished yetвнутри файл Chrome Developer Tools.
+
+
+
+
+It is caused by two-step response loading. If you are using some low-level API, make sure that you fetch not only headers, which arrive first, but also body content that comes later as a stream.
+
+I had the same issue when using the fetch function in JavaScript. To solve it, make sure you call a method that reads the body of the response like json() or text():
+
+// Sends request and loads only headers
+fetch('/foo');
+
+// Sends request, loads headers and then fetches the body as JSON
+fetch('/foo').then(response => response.json());
+
+In my case response headers were also loaded properly and I had a successful HTTP status code, but I was missing the body content and I had Caution: request is not finished yet inside Chrome Developer Tools.
+
+*/
