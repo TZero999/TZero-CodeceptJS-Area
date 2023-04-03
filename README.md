@@ -3,7 +3,7 @@ My CodeceptJS Training and Portfolio Area
 
 В данном репозитарии я буду собирать различные автоматизированные тесты, написанные на фреймворке "Codecept JS".
 
-Готовые тесты располагаются по пути ""
+Готовые тесты располагаются по пути "https://github.com/TZero999/CodeceptJS/tree/master/Tests/Current"
 
 CodeceptJS позволяет нам писать тестовые сценарии для автоматизированного e2e-тестирования.
 
