@@ -1,8 +1,6 @@
-# CodeceptJS
-My CodeceptJS Training and Portfolio Area
+# My CodeceptJS Training and Portfolio Area
 
-Об авторе:
-
+Здравствуйте.
 Меня зовут Скоробогатый Ярослав, мне 29 лет, я уроженец Республики Беларусь.
 На данный момент проживаю в г. Москва.
 
