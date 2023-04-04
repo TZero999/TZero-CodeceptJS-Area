@@ -2,23 +2,17 @@
 My CodeceptJS Training and Portfolio Area
 
 Об авторе:
-<style type='text/css'>
-link_btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 </style>
 <div id = 'social_links' class='link_btn'>
-    <div id = "vk">
-        <img src = "https://img.shields.io/badge/vk-blue"/>
-    </div>
-    <div id = 'headhunter'>
-        <img src = "https://img.shields.io/badge/HeadHunter-red/">
-    </div>
-    <div id = 'telegram'>
-        <img src = "https://img.shields.io/badge/Telegram-blue">
-    </div>
+    <a href="https://vk.com/tzero">
+        <img src = "https://img.shields.io/badge/vk-blue?style=for-the-badge"/>
+    </a>
+    <a href="https://hh.ru/resume/28a29296ff089d8bde0039ed1f4b5953344168">
+        <img src = "https://img.shields.io/badge/HeadHunter-red?style=for-the-badge/">
+    </a>
+    <a href="https://t.me/TZero_spb">
+        <img src = "https://img.shields.io/badge/Telegram-blue?style=for-the-badge">
+    </a>
 </div>
 
 В данном репозитарии я буду собирать различные автоматизированные тесты, написанные на фреймворке "Codecept JS".
