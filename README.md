@@ -8,10 +8,10 @@ My CodeceptJS Training and Portfolio Area
         <img src = "https://img.shields.io/badge/vk-blue?style=for-the-badge"/>
     </a>
     <a href="https://hh.ru/resume/28a29296ff089d8bde0039ed1f4b5953344168">
-        <img src = "https://img.shields.io/badge/HeadHunter-red?style=for-the-badge/">
+        <img src = "https://img.shields.io/badge/HeadHunter-red?style=for-the-badge"/>
     </a>
     <a href="https://t.me/TZero_spb">
-        <img src = "https://img.shields.io/badge/Telegram-blue?style=for-the-badge">
+        <img src = "https://img.shields.io/badge/Telegram-blue?style=for-the-badge"/>
     </a>
 </div>
 
