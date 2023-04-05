@@ -1,6 +1,6 @@
 Testing Challenges.org Testing automatization --
   Complition 18 test cases: 
-    Я на странице "http://testingchallenges.thetestingmap.org/i…
+    Я на странице "http://testingchallenges.thetestingmap.org/index.php"
     Я see title equals "Testing Challenges"
     Я grab source 
     Я беру куки "TestingChallenge"
@@ -26,7 +26,7 @@ Testing Challenges.org Testing automatization --
     Я кликаю "input[type="submit"]"
     Я заполняю поле "input[id="firstname"]", 
     Я кликаю "input[type="submit"]"
-    Я заполняю поле "input[id="firstname"]", "<img src="logo.pn…
+    Я заполняю поле "input[id="firstname"]", "<img src="logo.png">"
     Я кликаю "input[type="submit"]"
     Я заполняю поле "input[id="firstname"]", "👍"
     Я кликаю "input[type="submit"]"
@@ -34,22 +34,19 @@ Testing Challenges.org Testing automatization --
     Я кликаю "input[type="submit"]"
     Я заполняю поле "input[id="firstname"]", "@!_"
     Я кликаю "input[type="submit"]"
-    Я заполняю поле "input[id="firstname"]", "SmithAndWessonCor…
+    Я заполняю поле "input[id="firstname"]", "SmithAndWessonCorporationProduct"
     Я кликаю "input[type="submit"]"
-    Я заполняю поле "input[id="firstname"]", "SmithAndWessonCor…
+    Я заполняю поле "input[id="firstname"]", "SmithAndWessonCorporationAgent"
     Я кликаю "input[type="submit"]"
     Я заполняю поле "input[id="firstname"]", "'SQL-injection'"
     Я кликаю "input[type="submit"]"
-    Я заполняю поле "input[id="firstname"]", "<script>alert("Aa…
+    Я заполняю поле "input[id="firstname"]", "<script>alert("Aaaaaa!")</script>"
     Я кликаю "input[type="submit"]"
-    Я заполняю поле "input[id="firstname"]", "dfjwGGe82H43g3uRi…
+    Я заполняю поле "input[id="firstname"]", "dfjwGGe82H43g3uRiy53h"
     Я кликаю "input[type="submit"]"
-    Я заполняю поле "input[id="firstname"]", "oi32jnxd42390slk3…
+    Я заполняю поле "input[id="firstname"]", "oi32jnxd42390slk345"
     Я кликаю "input[type="submit"]"
-    Я заполняю поле "input[id="firstname"]", "detailsoverviewno…
+    Я заполняю поле "input[id="firstname"]", "detailsoverviewnow.css"
     Я кликаю "input[type="submit"]"
     Я see text equals "18", "span[class="values-tested"]"
-  ✔ OK in 40218ms
-
-
-  OK  | 1 passed   // 42s
+  ✔ OK in 34083ms
