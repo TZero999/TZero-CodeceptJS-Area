@@ -1,5 +1,3 @@
-const { assert } = require("@vue/compiler-core");
-
 Feature('Testing Challenges.org Testing automatization');
 
 Scenario('Complition 18 test cases: ', async ({ I }) => {
@@ -8,19 +6,19 @@ Scenario('Complition 18 test cases: ', async ({ I }) => {
     
     // Массив тестовых данных:
     let testsDataArray = [
-        'Smith',                                // Позитивный тест
+        'Smith',                                // Простейший позитивный тест
         ' Smith',                               // Пробел перед именем
         'Smith ',                               // Пробел после имени
         'Smith Wesson',                         // 2 слова (пробел посередине)
         'S',                                    // Минимальное число символов
         ' ',                                    // Пробел
         '',                                     // Ничего не введено 
-        '<img src="logo.png">',                  // HTML-тег
+        '<img src="logo.png">',                 // HTML-тег
         '👍',                                   // Non ASCII
         'Кирилл',                               // Кириллические символы
         '@!_',                                  // Специальные символы
-        'SmithAndWessonCorporationProduct',     // 32 символа
-        'SmithAndWessonCorporationAgent',       // 30 символов
+        'SmithAndWessonCorporationProduct',     // Количество символов больше допустимого (32 символа)
+        'SmithAndWessonCorporationAgent',       // Максимальное количество символов (30 символов)
         "'SQL-injection'",                      // SQL-инъекция
         '<script>alert("Aaaaaa!")</script>',    // XSS-атака
                                                 // Сюда добавится код из комментария
