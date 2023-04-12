@@ -20,6 +20,11 @@ async function POST(url, login, pass, token) {
 }
 
 
+function redirect(curl){
+    //curl /get_login to get your login and password
+    curl.split()
+ }
+
 Scenario('Get promocode for ivi.ru: ', async ({ I }) => {
 
     const url = 'http://task.test.ivi.ru/login';
