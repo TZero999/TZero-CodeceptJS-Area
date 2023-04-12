@@ -1,6 +1,6 @@
 Feature('IVI Sniffer Testing automatization');
 
-async function POST(url, login, pass, token, url2) {
+async function POST(url, login, pass, token) {
     let post = await fetch(url, {
         "credentials": "include",
         "headers": {
@@ -15,7 +15,8 @@ async function POST(url, login, pass, token, url2) {
         "method": "POST",
         "mode": "cors"
     });
-    return url2 = post.headers.get('login-and-password');
+    let curl = post.headers.get('login-and-password');
+    console.log(curl);
 }
 
 
