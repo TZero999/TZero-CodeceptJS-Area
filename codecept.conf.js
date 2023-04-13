@@ -41,8 +41,8 @@ exports.config = {
           '--ignore-certificate-errors',
           '--lang=ru-RU'
         ],
-        slowMo: 10,
-        defaultViewport: null,
+      slowMo: 10,
+      defaultViewport: null,
       }
     },
 
@@ -52,9 +52,11 @@ exports.config = {
     },
     
     REST: {
-      endpoint: 'http://localhost:5500/',
-      prettyPrintJson: true, 
+      url: 'http://task.test.ivi.ru/login',
+      prettyPrintJson: true,
     },
+
+    JSONResponse: {},
    
   },
 
