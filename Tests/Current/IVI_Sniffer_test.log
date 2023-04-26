@@ -1,0 +1,34 @@
+IVI Sniffer Testing automatization --
+  Get promocode for ivi.ru: 
+    Я на странице "http://task.test.ivi.ru/login"
+    Я вижу в_заголовке "Авторизация"
+    Я беру атрибут_из "input[id="csrf_token"]", "value"
+    Я беру куки "session"
+    Я заполняю поле "input[id="login"]", "Login"
+    Я заполняю поле "input[id="password"]", "Password"
+    Я кликаю "input[type="submit"]"
+    Я вижу элемент "[style*="red"]"
+    Я send post request "http://task.test.ivi.ru/login", {"csrf_token":"I…
+    Я open new tab 
+    Я на странице "http://task.test.ivi.ru/get_login"
+    Я беру текст_из "//html/body"
+    Я close current tab 
+    Я заполняю поле "input[id="login"]", "just_login"
+    Я заполняю поле "input[id="password"]", "just_password"
+    Я кликаю "input[type="submit"]"
+    Я вижу в_заголовке "Второе задание"
+    Я жду 1
+    Я send post request "http://task.test.ivi.ru/second_task", {"csrf_tok…
+    Я на странице "http://task.test.ivi.ru/wanna_finish"
+    Я беру текст_из "code"
+Номер символа для iOS: 2180
+Номер символа для Android: 2169
+    Я заполняю поле "input[id="count"]", 4
+    Я кликаю "input[type="submit"]"
+    Я вижу в_заголовке "Готово!"
+    Я дважды кликаю "b"
+    Я нажимаю кнопку ["Control","C"]
+    Я беру текст_из "b"
+В результате выполнения теста мы получили код: 6677905.
+Код скопирован в буфер обмена. Тест успешно завершён.
+  ✔ OK in 10523ms

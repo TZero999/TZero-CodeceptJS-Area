@@ -11,7 +11,7 @@ setCommonPlugins();
 
 /** @type {CodeceptJS.MainConfig} */
 exports.config = {
-  tests: './Tests/Current/*.js',
+  tests: './Tests/Current/Do not Done/*.js',
   output: './output',
   helpers: {
     Puppeteer: {
