@@ -17,7 +17,9 @@ IVI Sniffer Testing automatization --
     Я заполняю поле "input[id="password"]", "just_password"
     Я кликаю "input[type="submit"]"
     Я вижу в_заголовке "Второе задание"
-    Я жду 1
+    Я выбираю опцию "input[id="select-0"]"
+    Я кликаю "input[type="submit"]"
+    Я grab h t m l from "[style*="red"]"
     Я send post request "http://task.test.ivi.ru/second_task", {"csrf_tok…
     Я на странице "http://task.test.ivi.ru/wanna_finish"
     Я беру текст_из "code"
@@ -26,9 +28,13 @@ IVI Sniffer Testing automatization --
     Я заполняю поле "input[id="count"]", 4
     Я кликаю "input[type="submit"]"
     Я вижу в_заголовке "Готово!"
+    Я не вижу_элемент "[style*="red"]"
     Я дважды кликаю "b"
     Я нажимаю кнопку ["Control","C"]
     Я беру текст_из "b"
-В результате выполнения теста мы получили код: 6677905.
+В результате выполнения теста мы получили код: 6674474.
 Код скопирован в буфер обмена. Тест успешно завершён.
-  ✔ OK in 10523ms
+  ✔ OK in 10413ms
+
+
+  OK  | 1 passed   // 11s

@@ -129,8 +129,6 @@ Scenario('Get promocode for ivi.ru: ', async ({ I }) => {
   // Осуществим поиск в тексте названий двух самых распространённых платформ:
     posIos = txt.indexOf('ios' || 'iOS' || 'iOs');
     posAndroid = txt.indexOf('android' || 'Android');
-    console.log('Номер символа для iOS: ' + posIos);
-    console.log('Номер символа для Android: ' + posAndroid)
   
   // Выполним функцию поиска стартовой позиции массива поддерживаемых платформ, узнаем и введём его длину:
     start = findStartPos(posIos, posAndroid);
