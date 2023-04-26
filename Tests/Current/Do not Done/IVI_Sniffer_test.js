@@ -21,6 +21,7 @@ Scenario('Get promocode for ivi.ru: ', async ({ I }) => {
     I.seeInTitle('Авторизация');
 
   // Подготавливаем переменные:
+    // const endpoint = TARGET_URL + 'endpointName'
     let url = 'http://task.test.ivi.ru/'
     let login = 'Login';
     let pass = 'Password';

@@ -1,9 +1,12 @@
 const {
+  
   setHeadlessWhen,
   setCommonPlugins
 } = require('@codeceptjs/configure');
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
+const { HEADLESS = 'true', TARGET_URL, SLOW_MO = '', TEST_PATH, WINDOW_SIZE = '1920,1100' } = process.env;
+
 setHeadlessWhen(process.env.HEADLESS);
 
 // enable all common plugins https://github.com/codeceptjs/configure#setcommonplugins
