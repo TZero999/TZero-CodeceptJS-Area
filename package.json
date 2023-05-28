@@ -20,6 +20,7 @@
         "puppeteer": "^5.5.0"
     },
     "dependencies": {
-        "codeceptjs-resemblehelper": "^1.9.6"
+        "codeceptjs-resemblehelper": "^1.9.6",
+        "vue": "^3.3.4"
     }
 }
